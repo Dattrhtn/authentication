@@ -1,0 +1,13 @@
+<h1>{{this.loginService.presentAc?.name}} books</h1>
+<div>
+    <ul>
+        <li *ngFor="let book of this.loginService.presentAc?.listbook; let i = index">
+            <div>
+                <h2>{{book.name}}</h2>
+                <h3>{{book.author}}</h3>
+             </div>
+            <div><button (click)="deleteBook(i)">Delete</button></div>
+        </li>
+    </ul>
+</div>
+

@@ -1,0 +1,12 @@
+
+<div>
+    <ul>
+        <li *ngFor="let book of books">
+            <div>
+                <h2>{{book.name}}</h2>
+                <h3>{{book.author}}</h3>
+             </div>
+            <div><button (click)="addBook(book)">Add</button></div>
+        </li>
+    </ul>
+</div>

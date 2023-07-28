@@ -1,0 +1,9 @@
+
+<div>
+    <p>user name: </p>
+    <input [(ngModel)] = "userNameInput" type="text" >
+    <p>password: </p>
+    <input [(ngModel)] = "passwordInput" type="password">
+    <button (click)="checkAc()">Log in</button>
+    <h4 *ngIf="notiCheck">Invalid username or password.</h4>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="!loginService.isLogin">
+    <button routerLink="/Login">Log in</button>
+    <button routerLink="/Register">Register</button>
+</div>
+<div *ngIf="loginService.isLogin">
+    <div class="to-list">
+        <button (click)="showListBooks()">List books</button>
+    </div>
+    <div class="inf-ac">
+        <span *ngIf="loginService.presentAc" ><h2>{{loginService.presentAc.name}}</h2></span>
+        <button *ngIf="loginService.presentAc" (click)="showMyBooks()">My books</button>
+        <span><button routerLink="/Login" (click)="logOut()">Sign out</button></span>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div>
+    <p>user name: </p>
+    <input [(ngModel)]="nameRg" type="text">
+    <h4 *ngIf="notiRegName">This username is already in use.</h4>
+    <p>password: </p>
+    <input [(ngModel)]="passRg1" type="password">
+    <p>password: </p>
+    <input [(ngModel)]="passRg2" type="password">
+    <h4 *ngIf="notiRegPass">Passwords do not match.</h4>
+    <button (click)="checkRg()">Rigister</button>
+</div>
